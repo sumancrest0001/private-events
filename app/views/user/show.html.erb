@@ -1,15 +1,30 @@
-<h1>The user details</h1>
+<% provide(:title, @user.name) %>
+
+<h1 class=text-center>User Details</h1>
 <div class="users container">
   <div class="col-md-12">
-      <div class="form-control form-wrap">
+      <div class="form-control">
         <div class="form-group">
-
           <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" value="<%= user.name %>" disabled>
+          <input type="text" class="form-control" id="name" value="<%= @user.name %>" disabled>
+        </div>
 
-            <label for="email">Email:</label>
-            <input type="text" class="form-control" id="email" value="<%= user.email %>" disabled>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email" value="<%= @user.email %>" disabled>
         </div>
       </div>
   </div>
+
+
+  <div class="col-md-8">
+  <% if @user.events.any? %>
+    <h3>Events</h3>
+    <ol class="events">
+      <%= render @events %>
+    </ol>
+    <%= will_paginate @events %>
+  <% end %>
+</div>
+
 </div>

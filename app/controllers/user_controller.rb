@@ -6,6 +6,7 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome #{@user} !"
+      sign_in @user
       redirect_to @user
     else
       flash.now[:danger] = "invalid inputs"
@@ -14,6 +15,8 @@ class UserController < ApplicationController
   end
 
   def show
+    @user = User.find_by(id: params[:id])
+    @events = @user.events.paginate(page: params[:page])
   end
 
   private
