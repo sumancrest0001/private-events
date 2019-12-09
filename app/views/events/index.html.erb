@@ -1,0 +1,9 @@
+<div class="col-md-8 event-section" >
+  <h3>Events</h3>
+  <% @events.each do |event| %>
+  <ol class="events">
+    <%= event.description%>
+    <%= event.creator.name%>
+  </ol>
+<% end %>
+</div>
