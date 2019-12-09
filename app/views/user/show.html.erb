@@ -17,14 +17,8 @@
   </div>
 
 
-  <div class="col-md-8 event-section" >
-  <% if @user.events.any? %>
-    <h3>Events</h3>
-    <ol class="events">
-      <%= render @events %>
-    </ol>
-    <%= will_paginate @events %>
-  <% end %>
-</div>
+  <ol class="relationships">
+    <%= render @feed_items %>
+  </ol>
 
 </div>

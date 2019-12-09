@@ -15,6 +15,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find_by(id: params[:id])
+    @feed_items = @event.feed.paginate(page: params[:page])
   end
 
   def index
