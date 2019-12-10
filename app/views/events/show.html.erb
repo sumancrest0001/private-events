@@ -1,7 +1,8 @@
-<h1>Creator of the event</h1>
+<h3 style="margin-top: 80px">Creator of the event</h3>
 <p><%= @event.creator.name %></p>
-
-<h1>All the attendees of the event "<%= @event.description %>"</h1>
+<h3>Event Description</h3>
+ <%= @event.description %>
+<h3>All the attendees of the event</h3>
 <div class="col-md-8">
   <% @relationships.each do |relationship| %>
     <ol class="events">

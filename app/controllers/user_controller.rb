@@ -16,15 +16,9 @@ class UserController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @upcoming_events = @current_user.upcoming_events
-    @prev_events = @current_user.prev_events
+    @upcoming_events = @user.upcoming_events
+    @prev_events = @user.previous_events
     @user_relationships = @user.relationships
-  end
-
-  def destroy
-    sign_out
-    @current_user = nil
-    redirect_to root_path
   end
 
   private
