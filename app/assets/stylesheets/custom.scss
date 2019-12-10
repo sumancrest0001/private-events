@@ -25,10 +25,49 @@
   }
 }
 
-.event-section {
-  margin-top: 100px;
+.event-wrap {
+  padding: 5px;
+  border: solid gray 1px;
+  border-radius: 5px;
+  margin-bottom: 3px;
 }
 
-.events_list {
-  margin-top: 100px;
+/* Header */
+
+body {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* user */
+
+.users {
+  width: 90%;
+  justify-content: center;
+}
+
+/* events */
+
+.events {
+  margin-top: 20px;
+}
+
+ol {
+  padding: 0;
 }

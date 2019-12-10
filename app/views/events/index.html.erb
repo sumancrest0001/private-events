@@ -1,24 +1,39 @@
+<div class="row col-md-12 container">
+  <div class="events">
+    <div class="col-md-6">
+      <h1 class="text-center">Past Events</h1>
+      <% @past_events.each do |past_event| %>
+      <div class="event-wrap">
+        <div class="form-group">
+          <p><strong>Title:</strong></p>
+          <p><%= link_to past_event.description, "/events/#{past_event.id}" %></p>
+        </div>
 
-<div class="row" style="margin-top: 150px">
- <div class="col-md-8 upcoming_events_list">
-   <h1 class="upcoming-events-section"> Future Events</h1>
-   <% @future_events.each do |future_event| %>
-     <ol class="events">
-       <%=future_event.description%>
-       <span><small><%= future_event.creator.name %></small></span>
-     </ol>
-   <% end %>
- </div>
-</div>
+        <div class="form-group">
+          <p><strong>Author:</strong></p>
+          <p><%= past_event.creator.name %></p>
+        </div>
+      </div>
+    	<% end %>
+    </div>
+  </div>
+  
+  <div class="events">
+    <div class="col-md-6">
+      <h1 class="text-center">Future Events</h1>
+      <% @future_events.each do |future_event| %>
+      <div class="event-wrap">
+          <div class="form-group">
+            <p><strong>Title:</strong></p>
+            <p><%= link_to future_event.description, "/events/#{future_event.id}" %></p>
+          </div>
 
-<div class="row">
- <div class="col-md-8 previous_events_list">
-   <h1 class="previous-events-section"> Past Events</h1>
-   <% @past_events.each do |past_event| %>
-     <ol class="events">
-       <%= past_event.description%>
-       <span><small><%= past_event.creator.name %></small></span>
-     </ol>
-   <% end %>
- </div>
+          <div class="form-group">
+            <p><strong>Author:</strong></p>
+            <p><%= future_event.creator.name %></p>
+          </div>
+        </div>
+    	<% end %>
+    </div>
+  </div>
 </div>

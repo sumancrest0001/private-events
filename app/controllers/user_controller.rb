@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class UserController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     @user = User.new(user_params)
@@ -9,7 +10,7 @@ class UserController < ApplicationController
       sign_in @user
       redirect_to @user
     else
-      flash.now[:danger] = "invalid inputs"
+      flash.now[:danger] = 'invalid inputs'
       render 'new'
     end
   end
@@ -23,7 +24,7 @@ class UserController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit(:name, :email)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email)
+  end
 end
