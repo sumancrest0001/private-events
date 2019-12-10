@@ -1,6 +1,11 @@
 <h1>Creator of the event</h1>
 <p><%= @event.creator.name %></p>
 
-<div class="col-md-8">  
-  <%= render 'shared/feed' %>
+<h1>All the attendees of the event "<%= @event.description %>"</h1>
+<div class="col-md-8">
+  <% @relationships.each do |relationship| %>
+    <ol class="events">
+      <%= relationship.attendee.name%>
+    </ol>
+  <% end %>
 </div>

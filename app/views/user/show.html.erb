@@ -16,9 +16,25 @@
       </div>
   </div>
 
+  <div class="row">
+   <div class="col-md-8 upcoming_events_list">
+     <h1 class="upcoming-events-section"> Event you are attending</h1>
+     <% @upcoming_events.each do |upcoming_event| %>
+       <ol class="events">
+         <%= upcoming_event.description%>
+       </ol>
+     <% end %>
+   </div>
+  </div>
 
-  <ol class="relationships">
-    <%= render @feed_items %>
-  </ol>
-
+  <div class="row">
+   <div class="col-md-8 previous_events_list">
+     <h1 class="previous-events-section"> Attended Events</h1>
+     <% @prev_events.each do |prev_event| %>
+       <ol class="events">
+         <%= prev_event.description%>
+       </ol>
+     <% end %>
+   </div>
+  </div>
 </div>

@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.events.build(event_params)
+    @event = @current_user.events.build(event_params)
     if @event.save
       flash[:success] = "Event is successfully created !"
       redirect_to @event
@@ -15,7 +15,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find_by(id: params[:id])
-    @feed_items = @event.feed.paginate(page: params[:page])
+    @relationships = @event.relationships
   end
 
   def index
