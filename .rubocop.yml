@@ -33,8 +33,6 @@ Style/ClassAndModuleChildren:
 Style/MultipleComparison:
   Enabled: false
 
-Layout/HashAlignment:
-  EnforcedColonStyle: key
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/MultilineMethodCallIndentation:
