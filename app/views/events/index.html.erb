@@ -3,7 +3,30 @@
   <% @events.each do |event| %>
     <ol class="events">
       <%= event.description%>
-      <%= event.creator.name%>
+      <span><small><%= event.creator.name %></small></span>
     </ol>
    <% end %>
+</div>
+<div class="row" style="margin-top: 150px">
+ <div class="col-md-8 upcoming_events_list">
+   <h1 class="upcoming-events-section"> Future Events</h1>
+   <% @future_events.each do |future_event| %>
+     <ol class="events">
+       <%=future_event.description%>
+       <span><small><%= future_event.creator.name %></small></span>
+     </ol>
+   <% end %>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-md-8 previous_events_list">
+   <h1 class="previous-events-section"> Past Events</h1>
+   <% @past_events.each do |past_event| %>
+     <ol class="events">
+       <%= past_event.description%>
+       <span><small><%= past_event.creator.name %></small></span>
+     </ol>
+   <% end %>
+ </div>
 </div>
