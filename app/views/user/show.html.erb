@@ -1,16 +1,16 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, @current_user.name) %>
 
 <div class="users container-fluid col-md-8">
   <div class="row">
     <h1 class=text-center>User Details</h1>
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name" value="<%= @user.name %>" disabled>
+          <input type="text" class="form-control" id="name" value="<%= @current_user.name %>" disabled>
         </div>
 
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="text" class="form-control" id="email" value="<%= @user.email %>" disabled>
+          <input type="text" class="form-control" id="email" value="<%= @current_user.email %>" disabled>
         </div>
   </div>
 

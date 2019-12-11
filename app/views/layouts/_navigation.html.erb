@@ -8,8 +8,8 @@
           <li><%= link_to "Create Event", new_event_path %></li>
           <li><%= link_to "Sign Out", signout_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "Create new User", signup_path %></li>
-          <li><%= link_to "Log in", signin_path %></li>
+          <li><%= link_to "Sign Up", signup_path %></li>
+          <li><%= link_to "Log In", signin_path %></li>
         <% end %>
       </ul>
     </nav>
