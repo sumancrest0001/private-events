@@ -1,0 +1,53 @@
+<% provide(:title, @current_user.name) %>
+
+<div class="users container-fluid col-md-8">
+  <div class="row">
+    <h1 class=text-center>User Details</h1>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" value="<%= @current_user.name %>" disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email" value="<%= @current_user.email %>" disabled>
+        </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+     <h1 class="text-center">Events you are Attending</h1>
+     <% @upcoming_events.each do |upcoming_event| %>
+     <div class="event-wrap">
+       <div class="form-group">
+         <p><strong>Title:</strong></p>
+         <p><%= link_to upcoming_event.description, "/events/#{upcoming_event.id}" %></p>
+       </div>
+
+       <div class="form-group">
+         <p><strong>Author:</strong></p>
+         <p><%= upcoming_event.creator.name %></p>
+       </div>
+      </div>
+     <% end %>
+  </div>
+
+  <div class="col-md-6">
+     <h1 class="text-center">Attended Events</h1>
+     <% @prev_events.each do |prev_event| %>
+     <div class="event-wrap">
+       <div class="form-group">
+         <p><strong>Title:</strong></p>
+         <p><%= link_to prev_event.description, "/events/#{prev_event.id}" %></p>
+       </div>
+
+       <div class="form-group">
+         <p><strong>Author:</strong></p>
+         <p><%= prev_event.creator.name %></p>
+       </div>
+      </div>
+     <% end %>
+  </div>
+</div>
+
+</div>

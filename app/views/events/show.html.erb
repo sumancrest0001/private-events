@@ -1,0 +1,22 @@
+<div class="events container-fluid col-md-8">
+  <div class="form-group">
+    <label for="name">Event Creator:</label>
+    <input type="text" class="form-control" id="name" value="<%= @event.creator.name %>" disabled>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Event Description:</label>
+    <input type="text" class="form-control" id="name" value="<%= @event.description %>" disabled>
+  </div>
+
+  <h3>All the attendees of the event</h3>
+  <div class="col-md-8">
+    <ol>
+    <% @relationships.each do |relationship| %>
+       <div class="form-group">
+           <li><%= relationship.attendee.name %></li>
+       </div>
+    <% end %>
+    </ol>
+  </div>
+</div>
