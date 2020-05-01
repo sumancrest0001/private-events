@@ -1,23 +1,30 @@
-# README
+# Project: Private Events
+<b>Microverse</b>
 
 This is the 7th project of Microverse Ruby on Rails Curriculum and it is related to associations between models.
 
-## Languages Used: Ruby, HTML & CSS
+## App Screenshot
+![screenshot](https://i.imgur.com/GSSXyaj.png?1)
 
-How to install
+## Languages Used: 
+- Ruby
+- HTML / CSS
 
-1. Open Terminal
+## How to install
+
+1. open terminal window then execute:
 2. git clone https://github.com/sumancrest0001/private-events.git
-3. cd private_events
-4. open it in any text editor and you can go through the files
+3. cd private-events
+4. bundle install
+5. rails db:migrate
+6. rails server
 
 
-#### Contributors
-### sumancrest0001 (https://github.com/sumancrest0001)
+## 👤 Authors
+- Github: [@sumancrest0001](https://github.com/sumancrest0001)
 
-### noomdalv (https://github.com/noomdalv)
+- Github: [@noomdalv](https://github.com/noomdalv)
 
+## 📝 License
 
-#### License
-
-MIT Licensed
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
